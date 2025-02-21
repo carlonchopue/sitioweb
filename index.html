@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>para-ti-cele
+    </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background: linear-gradient(45deg, #0d9af0, #0df0e2);
+        }
+        .hero {
+            text-align: center;
+            padding: 400px 20px;
+            color: #000000;
+            background: url('img/FONDO.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .hero h1 {
+            font-size: 4em;
+            animation: fadeIn 3s ease;
+        }
+        .hero p {
+            font-size: 1.5em;
+            animation: fadeIn 5s ease;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        .carousel {
+            display: flex;
+            overflow: hidden;
+            flex-wrap: wrap;
+            width: 90%;
+            margin: 50px auto;
+            gap: 20px;
+            justify-content: center;
+        }
+        .carousel img {
+            width: 80%;
+            max-width: 600px;
+            border-radius: 20px;
+            transition: transform 0.5s;
+        }
+        .carousel img:hover {
+            transform: scale(1.05);
+        }
+        .quotes {
+            text-align: center;
+            padding: 50px;
+            color: #fff;
+            font-size: 1.8em;
+        }
+        .music-control {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            border-radius: 30px;
+            color: #fff;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+            .hero p {
+                font-size: 1.2em;
+            }
+            .carousel img {
+                width: 100%;
+            }
+            .quotes {
+                font-size: 1.5em;
+            }
+        }
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+            .hero p {
+                font-size: 1em;
+            }
+            .carousel {
+                flex-direction: column;
+                align-items: center;
+            }
+            .carousel img {
+                width: 90%;
+                margin-bottom: 20px;
+            }
+            .quotes {
+                font-size: 1.2em;
+            }
+            .music-control {
+                bottom: 10px;
+                right: 10px;
+                padding: 5px 10px;
+            }
+        }
+            .hero p {
+                font-size: 1em;
+            }
+            .quotes {
+                font-size: 1.2em;
+            }
+            .music-control {
+                bottom: 10px;
+                right: 10px;
+                padding: 5px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>¡Sorpresa, TE QUIEROOOOOOOO!</h1>
+        <h2>Eres la mejor amiga del mundo</h2>
+    </div>
+    <div class="carousel">
+        <img src="img/imagen1.jpg" alt="Recuerdo 1">
+        <img src="img/imagen4.jpg" alt="Recuerdo 2">
+        <img src="img/imagen2.jpg" alt="Recuerdo 3">
+    </div>
+    <div class="quotes">
+        <h1>A veces me pregunto cómo sería la vida sin tus abrazos</h1>
+        <h1>pero rápidamente me doy cuenta de que no quiero saberlo.</h1>
+        <h1>Aunque a veces me muerdas y me dejes marcas de batalla en el hombro</h1>
+        <h1>no cambiaría ni un segundo de todo lo que compartimos</h1>
+        <h1>Eres esa persona que convierte los días comunes en momentos inolvidables.</h1>
+        <h1>Gracias por cada risa, por cada abrazo apretado y por estar ahí</h1>
+        <h1>incluso en los días más difíciles</h1>
+        <h1>No sabes cuánto valoro tenerte en mi vida!</h1>
+        <h1>Contigo he aprendido que la vida se disfruta mejor riendo a carcajadas</h1>
+        <h1>compartiendo secretos y creando historias que algún día contaremos con nostalgia.</h1>
+        <h1>A veces me pregunto cómo aguantas mis quejas después de un entrenamiento duro o cómo sigues sonriendo después de nuestras aventuras en la estación.</h1>
+        <h1>Pero así eres tú inigualable, leal y única.</h1>
+        <h1>¡Te quiero más de lo que las palabras pueden explicar!</h1>
+        <h1>¡Te quiero muchísimo!</h1>   
+    </div>
+    <div class="carousel">
+        
+        <img src="img/imagen3.jpg" alt="Recuerdo 2">
+        
+    </div>
+    <audio id="bg-music" src="music/musica.mp3" loop></audio>
+    <div class="music-control" onclick="toggleMusic()">🎵 Reproducir Música</div>
+    
+    
+<script>
+        function toggleMusic() {
+            const music = document.getElementById('bg-music');
+            const control = document.querySelector('.music-control');
+            if (music.paused) {
+                music.play();
+                control.textContent = '🎵 Pausar Música';
+            } else {
+                music.pause();
+                control.textContent = '🎵 Reproducir Música';
+            }
+        }
+    </script>
+</body>
+</html>
+
